@@ -1,0 +1,20 @@
+{
+  "name": "poweredge-xe9680-teardown",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive 3D teardown of the Dell PowerEdge XE9680 6U AI server, as one offline HTML page.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "DEBUG=1 node build.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "esbuild": "0.28.1"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}
