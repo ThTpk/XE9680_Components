@@ -239,7 +239,8 @@ export function runLive() {
   });
   canvas.addEventListener('pointermove', (e) => {
     if (!drag) return;
-    off.az += ((e.clientX - drag.x) / scale) * 0.26;
+    // drag right and the machine turns right: the camera has to go the other way round it
+    off.az -= ((e.clientX - drag.x) / scale) * 0.26;
     off.el = clamp(off.el + ((e.clientY - drag.y) / scale) * 0.18, -28, 62);
     drag = {x: e.clientX, y: e.clientY};
     lastInput = T;
